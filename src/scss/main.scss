@@ -93,6 +93,17 @@ a:hover {
   font-size: 40px;
 }
 
+h3 {
+  padding: 13px 0;
+  color: var(--dark, #000);
+  font-family: var(--font-bold);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
 /* bootstrap highlighter ↓ */
 
 .row + .row {
@@ -251,4 +262,20 @@ a:hover {
 .article-popular {
   display: flex;
   flex-direction: column;
+}
+
+/* themes ↓ */
+
+.themes {
+  .all-themes {
+    padding-top: 30px;
+  }
+
+  a {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140.6%; /* 16.872px */
+    text-decoration-line: underline;
+  }
 }
