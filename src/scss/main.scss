@@ -186,3 +186,44 @@ a:hover {
     width: 100%;
   }
 }
+
+/* article news↓ */
+
+.news-small-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-article-news {
+  display: flex;
+  flex-direction: column;
+}
+
+// Tablet
+@media (min-width: 768px) {
+  .news-small-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// Desktop
+@media (min-width: 1440px) {
+  .news-small-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-article-news {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* article category ↓ */
+
+.category {
+  .title-content h2 {
+    font-size: 24px;
+  }
+}
