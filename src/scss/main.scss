@@ -29,6 +29,12 @@
 
 ::selection {
   background-color: var(--pink);
+  color: var(--white);
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 * {
@@ -40,6 +46,8 @@
 html {
   font-size: 12px;
   font-family: var(--font);
+  scroll-behavior: smooth;
+  transition: 0.3s ease;
 }
 
 body {
@@ -160,6 +168,7 @@ header {
   color: var(--white);
   position: sticky;
   top: 0;
+  z-index: 100;
 
   .header {
     display: flex;
@@ -197,6 +206,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    background-color: var(--black);
 
     a {
       text-decoration: none;
@@ -220,6 +230,7 @@ header {
     }
 
     .link {
+      position: relative;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -382,10 +393,6 @@ header {
   }
 }
 
-.label-not-selected {
-  background-color: var(--grey, #999);
-}
-
 /* article category ↓ */
 
 .category {
@@ -398,6 +405,16 @@ header {
     flex-wrap: wrap;
     gap: 13px;
     margin-bottom: 20px;
+
+    .label {
+      background-color: var(--grey, #999);
+      transition: 0.2s ease;
+      user-select: none;
+    }
+
+    .label-selected {
+      background-color: var(--pink, #999);
+    }
   }
 
   .article {
