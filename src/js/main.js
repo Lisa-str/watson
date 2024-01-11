@@ -1,4 +1,6 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 // label selection
 
@@ -16,33 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // nav animation
-gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".link a");
-  const activeLinkBars = document.querySelectorAll(".active-link-bar");
+// article animation
+var boxes = document.querySelectorAll(".article");
 
-  links.forEach((link, index) => {
-    const section = document.querySelector(link.getAttribute("href"));
-    const trigger = section.id === "spotlight" ? "top" : "center";
-
-    gsap.to(activeLinkBars[index], {
-      scrollTrigger: {
-        trigger: section,
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-        markers: true, // Remove this line if you don't want markers for debugging
-      },
-      width: () => link.offsetWidth,
-      left: () => link.offsetLeft,
-      ease: "power1.inOut",
-    });
-  });
-
-  // Set initial position of the bar under "à la une"
-  gsap.set(activeLinkBars[0], {
-    width: links[0].offsetWidth,
-    left: links[0].offsetLeft,
+boxes.forEach((box) => {
+  gsap.from(box, {
+    scrollTrigger: {
+      trigger: box,
+      markers: true,
+    },
+    opacity: 0,
+    y: 70,
+    duration: 2,
   });
 });
