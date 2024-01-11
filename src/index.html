@@ -2,125 +2,47 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>eikon parcel starter</title>
+    <title>watson rework</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
     <main>
-      <div class="container article">
+      <div class="container holder">
         <div class="row">
           <div class="col-12">
-            <div class="content content-highlight">
-              <img
-                src="../src/img/highlight.png?as=webp&width=1200"
-                srcset="
-                  ../src/img/highlight.png?as=webp&width=375   375w,
-                  ../src/img/highlight.png?as=webp&width=750   750w,
-                  ../src/img/highlight.png?as=webp&width=1500 1500w,
-                  ../src/img/highlight.png?as=webp&width=3000 3000w
-                "
-                alt="le conseil fédéral en 2023"
-              />
-              <div class="information">
-                <div class="label"><span>Suisse</span></div>
-                <div class="information-detail">
-                  <div class="autor"><p>de Phillipp Reich</p></div>
-                  <div class="line"></div>
-
-                  <div class="date"><p>14.12.2023 à 14:56</p></div>
-                </div>
-              </div>
-              <div class="title-content">
-                <h2>
-                  Le nouveau Conseil fédéral a battu un record vieux de 45 ans
-                </h2>
-              </div>
-              <div class="text">
-                <p>
-                  Avec une moyenne d'âge de 60 ans, le gouvernement suisse est
-                  l'un des plus vieux d'Europe.
-                </p>
-              </div>
-            </div>
+            <include src="include-article-detail.html">
+              { "articleimgname": "img/highlight.png", "articleimgalt": "conseil
+              fédéral", "articlelabel": "Suisse", "articleautorname": "de
+              Philipp Reich", "articledate": "14.12.2023 à 14:56",
+              "articlechapo": "Avec une moyenne d'âge de 60 ans, le gouvernement
+              suisse est l'un des plus vieux d'Europe.", "articletitle": "Le
+              nouveau Conseil fédéral a battu un record vieux de 45 ans" }
+            </include>
+          </div>
+          <div class="col-12">
+            <div class="title">à LA UNE</div>
+          </div>
+          <div class="col-12 col-md-6">
+            <include src="include-article.html">
+              { "articleimgname": "img/miss.png", "articleimgalt": "des miss",
+              "articlelabel": "Société", "articleautorname": "", "articledate":
+              "14.12.2023, 18:58", "articletitle": "Montrées seins nus, deux
+              finalistes Miss France font condamner TF1" }
+            </include>
+          </div>
+          <div class="col-12 col-md-6">
+            <include src="include-article.html">
+              { "articleimgname": "img/Sport.png", "articleimgalt": "des",
+              "articlelabel": "Société", "articleautorname": "de Dominic Wirth
+              et Val Gardena", "articledate": "21.12.2023 à 07:10",
+              "articletitle": "Marco Odermatt vit les jours les plus difficiles
+              de sa carrière" }
+            </include>
           </div>
         </div>
       </div>
-      <div class="spotlight holder">
-        <div class="container">
-          <div class="row">
-            <div class="col-12"><div class="title">à LA UNE</div></div>
-          </div>
-        </div>
-        <div class="container article">
-          <div class="row">
-            <div class="col-12">
-              <div class="content">
-                <img
-                  src="../src/img/miss.png?as=webp&width=1200"
-                  srcset="
-                    ../src/img/miss.png?as=webp&width=375   375w,
-                    ../src/img/miss.png?as=webp&width=750   750w,
-                    ../src/img/miss.png?as=webp&width=1500 1500w,
-                    ../src/img/miss.png?as=webp&width=3000 3000w
-                  "
-                  alt="le conseil fédéral en 2023"
-                />
-                <div class="information">
-                  <div class="label"><span>Société</span></div>
-                  <div class="information-detail">
-                    <div class="autor"><p></p></div>
-                    <div class="line"></div>
 
-                    <div class="date"><p>14.12.2023, 18:58</p></div>
-                  </div>
-                </div>
-                <div class="title-content">
-                  <h2>
-                    Montrées seins nus, deux finalistes Miss France font
-                    condamner TF1
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container article">
-          <div class="row">
-            <div class="col-12">
-              <div class="content">
-                <img
-                  src="../src/img/Sport.png?as=webp&width=1200"
-                  srcset="
-                    ../src/img/Sport.png?as=webp&width=375   375w,
-                    ../src/img/Sport.png?as=webp&width=750   750w,
-                    ../src/img/Sport.png?as=webp&width=1500 1500w,
-                    ../src/img/Sport.png?as=webp&width=3000 3000w
-                  "
-                  alt="le conseil fédéral en 2023"
-                />
-                <div class="information">
-                  <div class="label"><span>Sport</span></div>
-                  <div class="information-detail">
-                    <div class="autor">
-                      <p>de Dominic Wirth</p>
-                      <p>et Val Gardena</p>
-                    </div>
-                    <div class="line"></div>
-
-                    <div class="date"><p>21.12.2023 à 07:10</p></div>
-                  </div>
-                </div>
-                <div class="title-content">
-                  <h2>
-                    Le nouveau Conseil fédéral a battu un record vieux de 45 ans
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="l-dark news holder">
         <div class="container">
           <div class="row">

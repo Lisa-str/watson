@@ -119,12 +119,15 @@ h3 {
     font-size: 60px;
   }
   .title-content {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 // Desktop
 @media (min-width: 1440px) {
+  .title-content {
+    font-size: 22px;
+  }
 }
 
 /* bootstrap highlighter ↓ */
@@ -187,7 +190,7 @@ h3 {
 
       // Tablet
       @media (min-width: 768px) {
-        font-size: 23px;
+        font-size: 14px;
       }
     }
   }
