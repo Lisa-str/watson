@@ -9,7 +9,7 @@
   <body>
     <main>
       <div class="spotlight">
-        <div class="container holder">
+        <div class="container">
           <div class="row">
             <div class="col-12">
               <include src="include-article-detail.html">
@@ -23,7 +23,7 @@
               </include>
             </div>
             <div class="col-12">
-              <div class="title">à LA UNE</div>
+              <div class="title"><h1>à LA UNE</h1></div>
             </div>
             <div class="col-12 col-md-6">
               <include src="include-article.html">
@@ -47,10 +47,10 @@
       </div>
 
       <div class="l-dark news">
-        <div class="container holder">
+        <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="title">Actualité</div>
+              <div class="title"><h1>Actualité</h1></div>
             </div>
             <div class="col-12">
               <include src="include-article-detail.html">
@@ -87,55 +87,73 @@
       </div>
 
       <div class="category">
-        <div class="container holder">
+        <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="title">Catégories</div>
+              <div class="title"><h1>Catégories</h1></div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <include src="include-article-texte.html">
-                  {"articlelabel": "Suisse", "articleautorname": "",
-                  "articledate": "10.01.2024 à 21:25", "articlechapo": "En
-                  confiance, le président russe a promis la victoire en Ukraine
-                  ce jeudi. Il répondait aux questions des Russes. Voici ce
-                  qu'il a raconté.", "articletitle": "L'émission Arena de la SRF
-                  blâmée pour des propos sur le Hamas" }
-                </include>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="category-selector">
+                <div class="label"><span>Suisse</span></div>
+                <div class="label label-not-selected">
+                  <span>International</span>
+                </div>
+                <div class="label label-not-selected">
+                  <span>Économie</span>
+                </div>
+                <div class="label label-not-selected"><span>Société</span></div>
+                <div class="label label-not-selected"><span>Sport</span></div>
+                <div class="label label-not-selected">
+                  <span>Divertissement</span>
+                </div>
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <include src="include-article-texte.html">
+                {"articlelabel": "Suisse", "articleautorname": "",
+                "articledate": "10.01.2024 à 21:25", "articlechapo": "En
+                confiance, le président russe a promis la victoire en Ukraine ce
+                jeudi. Il répondait aux questions des Russes. Voici ce qu'il a
+                raconté.", "articletitle": "L'émission Arena de la SRF blâmée
+                pour des propos sur le Hamas" }
+              </include>
+            </div>
 
-              <div class="col-12">
-                <include src="include-article-texte.html">
-                  { "articlelabel": "Suisse", "articleautorname": "",
-                  "articledate": "10.01.2024 à 19:29", "articletitle": " Alain
-                  Berset déjà candidat pour un nouveau (prestigieux) job " }
-                </include>
-              </div>
-              <div class="col-12">
-                <include src="include-article-texte.html">
-                  { "articlelabel": "Suisse", "articleautorname": "de maja
-                  briner", "articledate": "10.01.2024 à 18:35", "articletitle":
-                  "16 000 réfugiés mettent sous pression le conseiller fédéral
-                  Beat Jans" }
-                </include>
-              </div>
-              <div class="col-12">
-                <include src="include-article-texte.html">
-                  { "articlelabel": "Suisse", "articleautorname": "",
-                  "articledate": "10.01.2024 à 12:54", "articletitle": "La
-                  notion de viol change ce 1er juillet en Suisse" }
-                </include>
-              </div>
+            <div class="col-12">
+              <include src="include-article-texte.html">
+                { "articlelabel": "Suisse", "articleautorname": "",
+                "articledate": "10.01.2024 à 19:29", "articletitle": " Alain
+                Berset déjà candidat pour un nouveau (prestigieux) job " }
+              </include>
+            </div>
+            <div class="col-12">
+              <include src="include-article-texte.html">
+                { "articlelabel": "Suisse", "articleautorname": "de maja
+                briner", "articledate": "10.01.2024 à 18:35", "articletitle":
+                "16 000 réfugiés mettent sous pression le conseiller fédéral
+                Beat Jans" }
+              </include>
+            </div>
+            <div class="col-12">
+              <include src="include-article-texte.html">
+                { "articlelabel": "Suisse", "articleautorname": "",
+                "articledate": "10.01.2024 à 12:54", "articletitle": "La notion
+                de viol change ce 1er juillet en Suisse" }
+              </include>
             </div>
           </div>
         </div>
       </div>
 
       <div class="l-dark popular">
-        <div class="container holder">
+        <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="title">Les plus lus</div>
+              <div class="title"><h1>Les plus lus</h1></div>
             </div>
             <div class="row">
               <div class="col-12 col-md-6">
@@ -171,7 +189,7 @@
         </div>
       </div>
 
-      <div class="themes holder">
+      <div class="themes">
         <div class="container">
           <div class="row">
             <div class="col-12">

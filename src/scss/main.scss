@@ -20,6 +20,7 @@
   --black: #000;
   --white: #fff;
   --pink: #c4007a;
+  --grey: #999;
 }
 
 /* ====================================
@@ -78,8 +79,8 @@ a:hover {
   cursor: pointer;
 }
 
-.title,
-.title-content {
+.title h1,
+.title-content h2 {
   color: var(--black, #000);
   font-family: var(--font-bold);
   font-size: 18px;
@@ -88,10 +89,10 @@ a:hover {
   line-height: normal;
 }
 
-.title {
+.title h1 {
   text-transform: uppercase;
   font-size: 40px;
-  margin: 50px 0 20px;
+  margin: 30px 0;
 }
 
 h3 {
@@ -103,10 +104,11 @@ h3 {
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
-.holder {
-  margin-bottom: 33px;
+.container {
+  padding: 0 12px 30px 12px;
 }
 
 .article {
@@ -115,17 +117,17 @@ h3 {
 
 // Tablet
 @media (min-width: 768px) {
-  .title {
+  .title h1 {
     font-size: 60px;
   }
-  .title-content {
+  .title-content h2 {
     font-size: 20px;
   }
 }
 
 // Desktop
 @media (min-width: 1440px) {
-  .title-content {
+  .title-content h2 {
     font-size: 22px;
   }
 }
@@ -148,7 +150,7 @@ h3 {
 
 .information {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 10px;
@@ -175,25 +177,10 @@ h3 {
       white-space: nowrap;
     }
   }
+}
 
-  .label {
-    background-color: var(--pink);
-    padding: 7px;
-
-    span {
-      font-family: var(--font-bold);
-      color: var(--white);
-      font-size: 11px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-
-      // Tablet
-      @media (min-width: 768px) {
-        font-size: 14px;
-      }
-    }
-  }
+.information-number {
+  align-items: flex-start;
 }
 
 .text {
@@ -215,14 +202,14 @@ h3 {
 
 .l-dark {
   background-color: var(--black);
-  border-top: solid 6px var(--pink);
+  border-top: solid 8px var(--pink);
 
   .text {
     color: rgba(255, 255, 255, 0.8);
   }
 
-  .title-content,
-  .title {
+  .title-content h2,
+  .title h1 {
     color: var(--white);
   }
 
@@ -237,13 +224,6 @@ h3 {
   }
 }
 
-// Tablet
-@media (min-width: 768px) {
-  .l-dark {
-    border-top: solid 8px var(--pink);
-  }
-}
-
 // Desktop
 @media (min-width: 1440px) {
   .l-dark {
@@ -251,11 +231,42 @@ h3 {
   }
 }
 
+/* label ↓ */
+
+.label {
+  background-color: var(--pink);
+  padding: 7px;
+
+  span {
+    font-family: var(--font-bold);
+    color: var(--white);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    // Tablet
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.label-not-selected {
+  background-color: var(--grey, #999);
+}
+
 /* article category ↓ */
 
 .category {
   .title-content h2 {
     font-size: 24px;
+  }
+
+  .category-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
   }
 }
 
