@@ -126,6 +126,7 @@ a:hover {
     gap: 10px;
     color: rgba(0, 0, 0, 0.38);
     width: 100%;
+    padding: 13px 0;
 
     .line {
       border: solid 0.5px rgba(0, 0, 0, 0.38);
@@ -226,4 +227,28 @@ a:hover {
   .title-content h2 {
     font-size: 24px;
   }
+}
+
+/* article popular ↓ */
+
+.article-popular {
+  .information {
+    align-items: flex-start;
+  }
+}
+
+.number {
+  color: var(--pink, #c4007a);
+  font-family: var(--font-bold);
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  transform: translate(0, -40%);
+}
+
+.article-popular {
+  display: flex;
+  flex-direction: column;
 }
